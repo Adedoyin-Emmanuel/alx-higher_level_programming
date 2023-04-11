@@ -19,7 +19,7 @@ It takes 2 parameters and returns an integer
 # a function that adds 2 integers
 def add_integer(a, b = 98):
    
-    if(matchType(a,b)):
+    if(matchType(a, b)):
         if(type(a) == float or type(b) == float):
            return (int(a) + int(b))
         else:
