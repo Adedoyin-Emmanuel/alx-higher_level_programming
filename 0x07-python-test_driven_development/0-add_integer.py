@@ -1,18 +1,8 @@
 #!/usr/bin/python3
-# @author: Adedoyin Emmanuel Adeniyi, @cohort11
 
 """
-This function returns True or False if it matches the int or float type.
-It takes 2 parameters and returns a boolean
+This function returns True or False if it matches the int or float type.It takes 2 parameters and returns a boolean
 """
-
-
-def matchType(a, b):
-    if (type(a) == int or type(a) == float or type(b) == int or type(b) == float):
-        return True
-    else:
-        return False
-
 
 # a function that adds 2 integers
 def add_integer(a, b=98):
@@ -22,10 +12,8 @@ def add_integer(a, b=98):
 
         Throws a TypeError if a or b is not an integer or a float
     """
-    if (matchType(a, b)):
-        if (type(a) == float or type(b) == float):
-            return (int(a) + int(b))
-        else:
-            return (a + b)
-    else:
-        raise TypeError(" a must be an integer or b must be an integer")
+    if((not isinstance(a, int) and not isinstance(a, float))):
+        raise TypeError("a must be an integer")
+    if((not isinstance(b, int) and not isinstance(b, float))):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
