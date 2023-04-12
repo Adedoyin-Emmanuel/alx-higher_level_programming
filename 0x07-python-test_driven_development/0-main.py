@@ -5,8 +5,12 @@ print(add_integer(1, 2))
 print(add_integer(100, -2))
 print(add_integer(2))
 print(add_integer(100.3, -2))
+print(add_integer('inf'))
+
 try:
     print(add_integer(4, "School"))
+    print(add_integer('inf'))
+    print(add_integer("NAN"))
 except Exception as e:
     print(e)
 try:
