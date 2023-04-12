@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""Implementation of an integer addition function."""
+"""Implementation of an integer addition function.
+The fuction returns an interger which is the addition of the arguments passed into it.
+"""
 
 
 def add_integer(a, b=98):
