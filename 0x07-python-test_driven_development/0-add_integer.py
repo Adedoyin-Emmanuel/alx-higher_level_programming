@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 
-"""
-This function returns True or False if it matches the int or float type.It takes 2 parameters and returns a boolean
-"""
+"""This function returns True or False if it matches the int or float type.It takes 2 parameters and returns a boolean"""
 
-# a function that adds 2 integers
+
 def add_integer(a, b=98):
-    """
-        This function adds 2 integers together
-        It takes 2 parameters and returns an integer
-
-        Throws a TypeError if a or b is not an integer or a float
+    """Returns the addition of a and b
+    Floating point arguments are typecasred into integers
+    Raises:
+        TypeError: if a or b is not an integer or a float
     """
     if((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
