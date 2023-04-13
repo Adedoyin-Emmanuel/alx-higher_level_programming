@@ -11,6 +11,6 @@ try:
     args = load_from_json("add-items.json")
     for i in command_line_args:
         args.append(i)
-    save_to_json(args, "add-items.json")
+    save_to_json(args, "add-item.json")
 except FileNotFoundError:
-    save_to_json(command_line_args, "add-items.json")
+    save_to_json(command_line_args, "add-item.json")
