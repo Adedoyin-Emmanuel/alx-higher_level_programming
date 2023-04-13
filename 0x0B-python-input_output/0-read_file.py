@@ -2,7 +2,7 @@
 
 
 def read_file(filename=""):
-    """Takes a argument: filename
+    """Takes an argument: filename
     Returns: the text file content
     """
     #throws an error if the filename is not specified

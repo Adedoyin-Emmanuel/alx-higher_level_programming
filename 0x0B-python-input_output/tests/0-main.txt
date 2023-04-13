@@ -1,1 +1,0 @@
-Why does python live on land? Because it is above the C level.
