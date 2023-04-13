@@ -3,9 +3,8 @@
 
 
 def read_file(filename=""):
-    """Takes an argument filename and prints the text file content
-    """
+    """Takes an argument filename and prints the text file content"""
     with open(filename, encoding = "utf-8") as file:
         filecontent = file.read()
-        print(filecontent, end = " ")
+        print(filecontent, end = "")
         
