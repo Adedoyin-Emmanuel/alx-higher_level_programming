@@ -3,13 +3,14 @@
 Then save the list to a file.
 """
 import sys
-if __name__ == "__main__":
-    save_to_json = __import__("5-save_to_json_file").save_to_json_file
-    load_from_json = __import__("6-load_from_json_file").load_from_json_file
-    
-    try:
-        args = load_from_json("add-items.json")
-    except FileNotFoundError:
-        args = []
-        args.extend(sys.argv[1:])
-        save_to_json(args, "add-items.json")
+save_to_json = __import__("5-save_to_json_file").save_to_json_file
+load_from_json = __import__("6-load_from_json_file").load_from_json_file
+command_line_args = sys.argv[1:]
+try:
+    args = load_from_json("add-items.json")
+    for i in command_line_args:
+        args.append(i)
+    print(args)
+    save_to_json(args, "add-items.json")
+except Exception:
+    save_to_json(command_line_args, "add-items.json")
