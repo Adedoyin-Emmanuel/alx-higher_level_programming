@@ -8,7 +8,7 @@ load_from_json = __import__("6-load_from_json_file").load_from_json_file
 command_line_args = sys.argv[1:]
 
 try:
-    args = load_from_json("add-items.json")
+    args = load_from_json("add-item.json")
     for i in command_line_args:
         args.append(i)
     save_to_json(args, "add-item.json")
