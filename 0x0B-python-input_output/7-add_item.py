@@ -6,11 +6,11 @@ import sys
 save_to_json = __import__("5-save_to_json_file").save_to_json_file
 load_from_json = __import__("6-load_from_json_file").load_from_json_file
 command_line_args = sys.argv[1:]
+
 try:
     args = load_from_json("add-items.json")
     for i in command_line_args:
         args.append(i)
-    print(args)
     save_to_json(args, "add-items.json")
-except Exception:
+except FileNotFoundError:
     save_to_json(command_line_args, "add-items.json")
