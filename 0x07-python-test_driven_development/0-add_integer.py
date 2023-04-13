@@ -5,7 +5,7 @@ The fuction returns an interger which is the addition of the arguments passed in
 """
 
 
-def add_integer(a, b=98):
+def add_integer(a, b = 98):
     """Returns the addition of a and b.
     Floating point arguments are typecasred into integers.
     Raises:

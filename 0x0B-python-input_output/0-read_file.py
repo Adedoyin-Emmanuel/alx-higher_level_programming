@@ -4,10 +4,10 @@ A function that reads a text file (UTF-8) and prints it to the standard input ou
 """
 
 
-def read_file(filename=""):
+def read_file(filename = ""):
     """Takes an argument: filename
     Prints the text file content
     """
-    with open(filename,encoding="utf-8") as file:
+    with open(filename, encoding = "utf-8") as file:
         file_content = file.read()
         print(file_content, end="")
