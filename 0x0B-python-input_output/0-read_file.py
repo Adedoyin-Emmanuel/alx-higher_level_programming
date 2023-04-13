@@ -8,7 +8,7 @@ def read_file(filename=""):
     #throws an error if the filename is not specified
     if(not filename):
         raise ValueError("Filename must be specified")
-    with open(filename, encoding="UTF-8") as file:
+    with open(filename, 'r', encoding="UTF-8") as file:
         read_file = file.read()
         print(read_file)
 
