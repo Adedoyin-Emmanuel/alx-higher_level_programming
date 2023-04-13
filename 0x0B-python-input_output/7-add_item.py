@@ -8,9 +8,9 @@ load_from_json = __import__("6-load_from_json_file").load_from_json_file
 command_line_args = sys.argv[1:]
 
 try:
-    args = load_from_json("add-item.json")
+    args = load_from_json("add_item.json")
     for i in command_line_args:
         args.append(i)
-    save_to_json(args, "add-item.json")
+    save_to_json(args, "add_item.json")
 except FileNotFoundError:
-    save_to_json(command_line_args, "add-item.json")
+    save_to_json(command_line_args, "add_item.json")
