@@ -12,7 +12,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if (isinstance(attrs, list) and all(type(ele) == str for ele in attrs)):
+        if (isinstance(attrs, list)
+           and all(type(ele) == str for ele in attrs)):
             attributes = {}
             for attribute_name in attrs:
                 if (hasattr(self, attribute_name)):
@@ -22,6 +23,6 @@ class Student:
         else:
             return self.__dict__
 
-    def reload_from_json(self,json):
+    def reload_from_json(self, json):
         for keys, values in json.items():
-            setattr(self,keys,values)
+            setattr(self, keys, values)
