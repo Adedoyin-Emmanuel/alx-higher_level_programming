@@ -21,3 +21,7 @@ class Student:
             return attributes
         else:
             return self.__dict__
+
+    def reload_from_json(self,json):
+        for keys, values in json.items():
+            setattr(self,keys,values)
