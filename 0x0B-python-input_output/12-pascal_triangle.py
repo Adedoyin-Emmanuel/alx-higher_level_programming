@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A function that returns a list of integers representing the 
+"""A function that returns a list of integers representing the
 Pascal's Triangle
 """
 
@@ -17,7 +17,7 @@ def pascal_triangle(n):
             pascal_triangle.append([1])
         else:
             previous_row = pascal_triangle[i - 1]
-            #this is a constant row
+            # this is a constant row
             row = [1]
             for j in range(1, i):
                 row.append(previous_row[j - 1] + previous_row[j])
