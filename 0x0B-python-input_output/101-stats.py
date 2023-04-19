@@ -8,7 +8,7 @@ def show_stats(size, status_codes):
         size (integer): The read file size.
         status_codes (dict): An arry of status codes.
     """
-    print("File size:{}".format(size))
+    print("File size: {}".format(size))
     for array_key in sorted(status_codes):
         print("{}: {}".format(array_key, status_codes[array_key]))
 
