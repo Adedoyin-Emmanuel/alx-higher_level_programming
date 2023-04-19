@@ -9,7 +9,7 @@ def lookup(obj):
     and methods of an object passed as an argument to the function.
     Arguments:
         obj: (object)
-    Returns: 
+    Returns:
         A list of avaliable attributes and methods.
     """
     return dir(obj)
