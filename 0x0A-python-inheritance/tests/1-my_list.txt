@@ -9,6 +9,7 @@ Usage
 =====
 
 Public instance method: ``def print_sorted(self)``: that prints the list, but sorted (ascending sort)
+Bottom Line Check: 0
 ::
     >> MyList = __import__('1-my_list').MyList
     >> my_list = MyList()
@@ -18,8 +19,95 @@ Public instance method: ``def print_sorted(self)``: that prints the list, but so
     >> my_list.append(3)
     >> my_list.append(5)
     >> print(my_list)
+    [1, 4, 2, 3, 5]
     >> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
     >> print(my_list)
     [1, 4, 2, 3, 5]
+    >>
+
+-------------------------------------------
+
+Undefined Object Check:
+::
+    >> my_lists.print_sorted()
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    NameError: name 'my_lists' is not defined. Did you mean: 'my_list'?
+    >>>
+    
+-------------------------------------------
+
+Passed A Test Check:
+:: 
+    >> array = [1, 5, 3, 4, 2]
+    >> my_list.print_sorted(array)
     [1, 2, 3, 4, 5]
-    [1, 4, 2, 3, 5]
+    >>
+    
+-------------------------------------------
+
+Empty List Check:
+:: 
+    >> array = []
+    >> my_list.print_sorted(array)
+    []
+    >>
+    
+-------------------------------------------
+
+One Number Check:
+:: 
+    >> my_list.append(1)
+    >> my_list.print_sorted(array)
+    []
+    >>
+
+-------------------------------------------
+
+Repeated Number Check:
+:: 
+    >> my_list.append(1)
+    >> my_list.append(1)
+    >> my_list.append(1)
+    >> my_list.append(1)
+    >> my_list.append(1)
+    >> my_list.append(1)
+    >> my_list.print_sorted(array)
+    [1, 1, 1, 1, 1, 1]
+    >>
+
+-------------------------------------------
+
+
+Negative Numbers Check:
+:: 
+    >> my_list.append(-12)
+    >> my_list.append(-13)
+    >> my_list.append(-1)
+    >> my_list.print_sorted(array)
+    [-13, -12, -1]
+    >>
+
+-------------------------------------------
+
+Combined Numbers Check:
+:: 
+    >> my_list.append(12)
+    >> my_list.append(-13)
+    >> my_list.append(1)
+    >> my_list.append(-27)
+    >> my_list.append(2)
+    >> my_list.print_sorted(array)
+    [-27, -13, 1, 2, 12]
+    >>
+
+-------------------------------------------
+
+Parent Object Check:
+::
+    >> my_list = [1, 2, 3, 5, 6]
+    >> my_list.print_sorted()
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    AttributeError: 'list' object has no attribute 'print_sorted'
