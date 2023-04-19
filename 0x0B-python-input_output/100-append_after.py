@@ -5,7 +5,7 @@ after each line containing specific string.
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """Inserts a text after each lone containing 
+    """Inserts a text after each lone containing
     specific string.
     Arguments:
     filename: (string): The name of the file.
@@ -18,6 +18,6 @@ def append_after(filename="", search_string="", new_string=""):
             text_to_append += current_line
             if (search_string in current_line):
                 text_to_append += new_string
-    #open the file and write the text to it.
+    # open the file and write the text to it.
     with open(filename, "w", encoding="utf-8") as file_opended2:
         file_opended2.write(text_to_append)
