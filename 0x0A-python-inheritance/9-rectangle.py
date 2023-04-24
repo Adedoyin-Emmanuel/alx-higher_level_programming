@@ -1,9 +1,30 @@
 #!/usr/bin/python3
 """A class that inherits from BaseGeometry class."""
-BaseGeometryClass = __import__("7-base_geometry").BaseGeometry
 
 
-class Rectangle(BaseGeometryClass):
+class BaseGeometry:
+    """An empty Base Geometry Class.
+    Arguments: self
+    Returns: null
+    """
+
+    def __init__(self):
+        pass
+
+    def area(self):
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """Integer validator function."""
+        self.name = name
+        self.value = value
+        if (type(value) != int):
+            raise TypeError(f"{self.name} must be an integer")
+        if (self.value <= 0):
+            raise ValueError(f"{self.name} must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
     """A class that inherits from BaseGeometry class."""
 
     def __init__(self, width, height):
