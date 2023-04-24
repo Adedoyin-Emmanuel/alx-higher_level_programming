@@ -13,7 +13,8 @@ def add_attribute(object, attribute, value):
     Raises TypeError: If object cannot have new attribute.
     """
 
-    if (hasattr(object, "__dict__")):
+    if (not hasattr(object, "__dict__")):
+        """Check if object is an instance of a class."""
         raise TypeError("can't add new attribute")
-    else:
-        setattr(object, attribute, value)
+
+    setattr(object, attribute, value)
