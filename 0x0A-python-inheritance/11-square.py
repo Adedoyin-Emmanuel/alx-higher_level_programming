@@ -20,4 +20,4 @@ class Square(RectangleClass):
         return (self.__size * self.__size)
 
     def __str__(self):
-        return ("[Square] {:w} {:w}".format(self.__size, self.__size))
+        return ("[Square] {:d} {:d}".format(self.__size, self.__size))
