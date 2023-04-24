@@ -9,10 +9,6 @@ class BaseGeometry:
     Arguments: self
     Returns: null
     """
-
-    def __init__(self):
-        pass
-
     def area(self):
         """An empty Base Geometry Class.
         Arguments: self
@@ -22,9 +18,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Integer validator function."""
-        self.name = name
-        self.value = value
-        if (type(value) != int):
-            raise TypeError(f"{self.name} must be an integer")
-        if (self.value <= 0):
-            raise ValueError(f"{self.name} must be greater than 0")
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
