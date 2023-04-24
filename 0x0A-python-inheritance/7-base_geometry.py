@@ -16,13 +16,13 @@ class BaseGeometry:
     def area(self):
         raise Exception("area() is not implemented")
 
-    def integer_validation(self, name, value):
+    def integer_validator(self, name, value):
         """Integer validator function."""
         self.name = name
         self.value = value
         if (type(value) != int):
-            raise TypeError(f"{self.value} must be an integer")
+            raise TypeError(f"{self.name} must be an integer")
         if (self.value <= 0):
-            raise ValueError(f"{self.value} must be greater than 0")
+            raise ValueError(f"{self.name} must be greater than 0")
         
         
