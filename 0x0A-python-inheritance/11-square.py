@@ -24,4 +24,4 @@ class Square(RectangleClass):
         """Returns the string representation of the
         rectangle description: [Rectangle] <width>/<height>
         """
-        return ("[Square] {:d} {:d}".format(self.__size, self.__size))
+        return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
