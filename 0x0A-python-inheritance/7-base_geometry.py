@@ -24,5 +24,3 @@ class BaseGeometry:
             raise TypeError(f"{self.name} must be an integer")
         if (self.value <= 0):
             raise ValueError(f"{self.name} must be greater than 0")
-        
-        
