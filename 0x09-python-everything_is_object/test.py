@@ -1,4 +1,7 @@
-list1 = ()
-list2 = ()
+a = [1, 2, 3]
 
-print( list1 is list2)
+print(id(a))
+
+a = a + [5]
+print(a)
+print(id(a))
