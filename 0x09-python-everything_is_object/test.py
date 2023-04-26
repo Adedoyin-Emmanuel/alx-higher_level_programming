@@ -1,3 +1,4 @@
-list1 = (1,)
+list1 = (1)
+list2 = (1)
 
-print(type(list1))
+print( list1 is list2)
