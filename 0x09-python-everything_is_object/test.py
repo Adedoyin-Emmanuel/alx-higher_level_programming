@@ -1,6 +1,8 @@
-list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-list2 = list1
+def increment(number):
+    number += 1
+    print(f"number is {number} in function")
 
-list1 = list1 + [4]
+a = 1
+increment(a)
 
-print(list2)
+print(a)
