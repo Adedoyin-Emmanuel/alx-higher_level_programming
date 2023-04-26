@@ -2,7 +2,11 @@ def increment(number):
     number += 1
     print(f"number is {number} in function")
 
-a = 1
-increment(a)
+def append_list(list):
+    list.append(4)
+    
 
-print(a)
+a = 1
+list = [1, 2, 3]
+append_list(list)
+print(list)
