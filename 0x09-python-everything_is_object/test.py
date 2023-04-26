@@ -1,12 +1,10 @@
-def increment(number):
-    number += 1
-    print(f"number is {number} in function")
+def assign_value(n, m):
+    n = m
 
-def append_list(list):
-    list.append(4)
-    
 
-a = 1
-list = [1, 2, 3]
-append_list(list)
-print(list)
+list1 = [1, 2, 3,]
+list2 = [3, 2, 1]
+
+assign_value(list1, list2)
+
+print(list1)
