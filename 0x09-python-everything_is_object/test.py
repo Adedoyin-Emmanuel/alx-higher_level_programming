@@ -1,4 +1,4 @@
-list1 = (1, 2)
-list2 = (1, 2)
+list1 = ()
+list2 = ()
 
 print( list1 is list2)
