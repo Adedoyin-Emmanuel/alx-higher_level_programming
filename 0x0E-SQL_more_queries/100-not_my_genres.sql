@@ -1,4 +1,4 @@
--- This command 
+-- This command Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 16-shows_by_genre.sql)
 SELECT DISTINCT `name`
   FROM `tv_genres` AS g
        INNER JOIN `tv_show_genres` AS s
