@@ -1,8 +1,7 @@
 #!/usr/bin/node
-let firstArgument = process.argv[3];
-let secondArgument = process.argv[4];
 const arg = process.argv;
-
+let firstArgument = arg[2];
+let secondArgument = arg[3];
 if (!arg[2]) {
   firstArgument = 'undefined';
   secondArgument = 'undefined';
