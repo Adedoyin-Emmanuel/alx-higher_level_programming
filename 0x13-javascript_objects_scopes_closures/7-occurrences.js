@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function nbOccurences (list, searchElement) {
+exports.nbOccurences = function nbOccurences (list, searchElement) {
   if (!list) return;
   let counter = 0;
   for (let i = 0; i < list.length; i++) {
@@ -8,6 +8,4 @@ function nbOccurences (list, searchElement) {
     }
   }
   return counter;
-}
-
-module.exports = nbOccurences;
+};
