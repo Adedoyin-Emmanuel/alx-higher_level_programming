@@ -24,6 +24,6 @@ if __name__ == '__main__':
 
     allStates = pointer.fetchall()
     for state in allStates:
-            print(state)
+        print(state)
     pointer.close()
     conn.close()
