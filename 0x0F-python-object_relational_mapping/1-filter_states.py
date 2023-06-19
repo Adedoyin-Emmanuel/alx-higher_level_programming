@@ -16,12 +16,11 @@ if __name__ == '__main__':
     )
 
     pointer = conn.cursor()
-    pointer.execute('SELECT * \
+    pointer.execute("SELECT * \
                     FROM states \
                     WHERE CONVERT(`name` USING Latin1) \
                     COLLATE Latin1_General_CS \
-                    LIKE N%')
-
+                    LIKE 'N%';")
     allStates = pointer.fetchall()
     for state in allStates:
         print(state)
