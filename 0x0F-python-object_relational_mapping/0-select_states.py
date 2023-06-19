@@ -17,6 +17,6 @@ if __name__ == '__main__':
     pointer = conn.cursor()
     pointer.execute('SELECT * FROM states ORDER BY states.id ASC;')
 
-    totalStates = pointer.fetchAll()
+    totalStates = pointer.fetchall()
     for state in totalStates:
         print(state)
