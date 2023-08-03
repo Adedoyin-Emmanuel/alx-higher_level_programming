@@ -4,7 +4,8 @@ $(document).ready(($) => {
   $.ajax({
     url: apiUrl,
     success: (result) => {
-      $("#character").text(result);
+      console.log(result);
+      $("#character").text(result.name);
     },
     error: (error) => {
       console.log(error);

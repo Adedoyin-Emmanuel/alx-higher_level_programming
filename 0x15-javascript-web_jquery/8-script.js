@@ -4,7 +4,7 @@ $(document).ready(($) => {
   $.ajax({
     url: apiUrl,
     success: (results) => {
-      results.forEach((result) => {
+      results.results.forEach((result) => {
         $("#list_movies").append(`
         <li>${result.title}</li>
       `);
