@@ -1,6 +1,4 @@
 $(document).ready(($) => {
-  const apiUrl = "https://www.fourtonfish.com/hellosalut/hello/?";
-
   $("#btn_translate").on("click", () => {
     translate();
   });
@@ -15,6 +13,8 @@ $(document).ready(($) => {
 });
 
 const translate = () => {
+  const apiUrl = "https://www.fourtonfish.com/hellosalut/hello/?";
+
   $.ajax({
     url: `${apiUrl}${$.param({ lang: $("#language_code").val() })}`,
     success: (result) => {
